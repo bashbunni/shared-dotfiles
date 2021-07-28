@@ -50,14 +50,8 @@ Plug 'puremourning/vimspector'
 "Nvim motions
 Plug 'phaazon/hop.nvim'
 
-"Comment Plugin
-Plug 'preservim/nerdcommenter'
-
-"Auto-format plugin
-Plug 'sbdchd/neoformat'
-
-"Code folding
-Plug 'tmhedberg/SimpylFold'
+"Buffer navigation
+Plug 'vim-airline/vim-airline'
 
 "Haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -77,6 +71,12 @@ Plug 'nvim-telescope/telescope.nvim'
 "Telescope
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'fannheyward/telescope-coc.nvim'
+
+"git diff
+Plug 'sindrets/diffview.nvim'
+
+"magit
+Plug 'TimUntersberger/neogit'
 
 "devicons
 Plug 'kyazdani42/nvim-web-devicons'
@@ -119,6 +119,12 @@ noremap fm <C-w>=
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Buffer navigation
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
 
 "****************************************************
 "Markdown Preview Recommended Settings
